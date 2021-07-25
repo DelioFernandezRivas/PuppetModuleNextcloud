@@ -110,7 +110,7 @@ package { 'installsudo':
       ensure          => present,
       path            => '/var/www/nextcloud-22.0.0.tar.bz2',
       #extract_command => 'tar -xjvf',
-      source          => 'puppet:///modules/nextcloudmio/nextcloud-22.0.0.tar.bz2',
+      source          => 'https://download.nextcloud.com/server/releases/nextcloud-22.0.0.tar.bz2',
       extract         => true,
       extract_path    => '/var/www/',
       before          => [File['delete'],
