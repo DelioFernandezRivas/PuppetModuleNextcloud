@@ -53,7 +53,7 @@ case $facts['os']['name'] {
     exec { 'echo':
       command => '/usr/bin/echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list',
       require => Exec['wget'],
-class_name      before  => Exec['update'],
+      before  => Exec['update'],
 
     }
     $paquetes.each | String $pkgt | {
