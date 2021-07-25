@@ -44,6 +44,7 @@ case $facts['os']['name'] {
       package { $pkg:
           ensure  => installed,
           name    => $pkg,
+          require => Exec['update'],
       }
     }
     exec { 'wget':
@@ -78,6 +79,7 @@ case $facts['os']['name'] {
       package { $pkg:
           ensure  => installed,
           name    => $pkg,
+          require => Exec['update'],
       }
     }
     exec { 'wget':
