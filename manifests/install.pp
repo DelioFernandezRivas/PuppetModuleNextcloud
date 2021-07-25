@@ -37,7 +37,7 @@ case $facts['os']['name'] {
 
   'Debian': {
     exec { 'update':
-      command => '/usr/bin/apt update',
+      command => '/usr/bin/apt -y update',
     }
 
     $paquetesdebian.each | String $pkg | {
